@@ -1,4 +1,4 @@
-package com.lengyel;
+package com.flight;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;

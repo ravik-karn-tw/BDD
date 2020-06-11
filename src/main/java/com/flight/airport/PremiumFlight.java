@@ -1,20 +1,17 @@
-package com.lengyel.airport;
+package com.flight.airport;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-public class EconomyFlight implements Flight {
+public class PremiumFlight implements Flight {
 
     private String id;
     private Set<Passenger> passengerSet;
-    private boolean isEconomy;
+    private boolean isPremium;
 
-
-    public EconomyFlight(String id) {
+    public PremiumFlight(String id) {
         this.id = id;
         passengerSet = new HashSet<>();
-        isEconomy = true;
+        isPremium = true;
     }
 
     public String getId() {
@@ -26,10 +23,15 @@ public class EconomyFlight implements Flight {
     }
 
     public boolean addPassenger(Passenger passenger) {
-        return passengerSet.add(passenger);
+        if(passenger.isVip()) {
+            return passengerSet.add(passenger);
+        } else {
+            return false;
+        }
     }
 
-    public boolean removePassenger(Passenger passenger) {
+    public boolean
+    removePassenger(Passenger passenger) {
         if(!passenger.isVip()) {
             return passengerSet.remove(passenger);
         } else {

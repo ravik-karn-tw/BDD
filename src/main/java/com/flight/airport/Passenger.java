@@ -1,4 +1,4 @@
-package com.lengyel.airport;
+package com.flight.airport;
 
 public class Passenger {
 

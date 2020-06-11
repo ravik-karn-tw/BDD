@@ -1,6 +1,6 @@
-package com.lengyel.mileage;
+package com.flight.mileage;
 
-import com.lengyel.airport.Passenger;
+import com.flight.airport.Passenger;
 
 import java.util.Collections;
 import java.util.HashMap;

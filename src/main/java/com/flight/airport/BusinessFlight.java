@@ -1,17 +1,17 @@
-package com.lengyel.airport;
+package com.flight.airport;
 
 import java.util.*;
 
-public class PremiumFlight implements Flight {
+public class BusinessFlight implements Flight {
 
     private String id;
     private Set<Passenger> passengerSet;
-    private boolean isPremium;
+    private boolean isBusiness;
 
-    public PremiumFlight(String id) {
+    public BusinessFlight(String id) {
         this.id = id;
         passengerSet = new HashSet<>();
-        isPremium = true;
+        isBusiness = true;
     }
 
     public String getId() {
@@ -30,8 +30,7 @@ public class PremiumFlight implements Flight {
         }
     }
 
-    public boolean
-    removePassenger(Passenger passenger) {
+    public boolean removePassenger(Passenger passenger) {
         if(!passenger.isVip()) {
             return passengerSet.remove(passenger);
         } else {

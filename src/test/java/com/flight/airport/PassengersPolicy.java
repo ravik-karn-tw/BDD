@@ -1,4 +1,4 @@
-package com.lengyel.airport;
+package com.flight.airport;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
